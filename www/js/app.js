@@ -24,3 +24,24 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.controller('instagram',function($scope)
+{
+  console.log("Instagram Controller Running")
+  $scope.login=function()
+    {
+        console.log("Login Clicked!")
+        console.log("Email = "+$scope.myForm.mail+" and Password = "+$scope.myForm.password);
+    };
+    $scope.forgot=function()
+    {
+      console.log("Forgot anchor clicked")
+    }
+    $scope.siginHelp=function()
+    {
+      console.log("sigin Help Clicked!")
+    }
+    $scope.fb=function()
+    {
+      console.log("Continue with facebook")
+    }
+});

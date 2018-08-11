@@ -33,13 +33,40 @@
     <script src="js/app.js"></script>
   </head>
   <body ng-app="starter">
-
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
+    <div ng-controller="instagram">
+    <form name="myForm">
+        <ion-pane>      
+        <ion-content>
+          <div style="text-align: center; margin-top:100px;">
+              <img src="img/insta.png"/>
+          </div>
+          <div style="text-align: center;margin: 30px;">
+           
+             <label class="item item-input" style="background-color: #fcfcfc; color: grey">
+                <input type="text" placeholder="Phone number, email or username" ng-model="myForm.mail"/>
+              </label>
+              <br/>
+              <label class="item item-input" style="background-color: #fcfcfc">
+                <input type="text" placeholder="Password" ng-model="myForm.password"/>
+              </label>
+              <br/>
+              <button ng-click="login()" class="button button-outline button-positive" style="width: 100%">Log In</button>
+              <br/><br/>
+              <a ng-click="forgot()" style="text-align: center; color:grey; font-size: 12px;">Forgot your login details?</a>
+              <a ng-click="signinHelp()" style="text-align: center; color:grey; font-size: 12px;"><b>Get help signing in.</b></a>
+              <p style="text-align:center;">    
+                  <hr style="float: left; width:45%;">OR<hr style="float: right; width:47%">
+              </p>
+              <button ng-click="fb()" class="button button-clear button-positive" style="font-size: 12px"><img src="img/fb.png"/><b> Continue with Facebook</b></button>
+        
+          </div>
       </ion-content>
+      <div class = "bar bar-footer " style="border-top: 1px solid lightgrey; display: inline; text-align: center;"> 
+        <button ng-click="signup()" class="button button-clear button-stable" style="color:grey;  font-size: 12px;">Don't have an account?<b> Sign up.</b></button>
+      </div>
     </ion-pane>
+    
+       </form>
+    </div>
   </body>
 </html>
